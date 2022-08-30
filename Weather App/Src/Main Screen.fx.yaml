@@ -8,7 +8,7 @@
         Align: =Align.Right
         Height: =112
         Size: =30
-        Text: ="Enter Your Location"
+        Text: ="Enter the Location"
         Width: =408
         Y: =17
         ZIndex: =1
