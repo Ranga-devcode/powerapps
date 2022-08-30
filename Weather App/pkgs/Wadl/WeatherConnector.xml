@@ -1,0 +1,108 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://asia-001.azure-apim.net/apim/weather-20connector-5ff513920a258719aa-5f3359874475a052d9" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="WeatherConnector" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Weather Connector"></doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://asia-001.azure-apim.net/apim/weather-20connector-5ff513920a258719aa-5f3359874475a052d9" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="GetWeather_responses_default_def_location_def_name_def" />
+      <string name="GetWeather_responses_default_def_location_def_region_def" />
+      <string name="GetWeather_responses_default_def_location_def_country_def" />
+      <number name="GetWeather_responses_default_def_location_def_lat_def" />
+      <number name="GetWeather_responses_default_def_location_def_lon_def" />
+      <string name="GetWeather_responses_default_def_location_def_tz_id_def" />
+      <number name="GetWeather_responses_default_def_location_def_localtime_epoch_def" />
+      <string name="GetWeather_responses_default_def_location_def_localtime_def" />
+      <object name="GetWeather_responses_default_def_location_def">
+        <property name="name" type="string" />
+        <property name="region" type="string" />
+        <property name="country" type="string" />
+        <property name="lat" type="number" />
+        <property name="lon" type="number" />
+        <property name="tz_id" type="string" />
+        <property name="localtime_epoch" type="number" />
+        <property name="localtime" type="string" />
+      </object>
+      <number name="GetWeather_responses_default_def_current_def_last_updated_epoch_def" />
+      <string name="GetWeather_responses_default_def_current_def_last_updated_def" />
+      <number name="GetWeather_responses_default_def_current_def_temp_c_def" />
+      <number name="GetWeather_responses_default_def_current_def_temp_f_def" />
+      <number name="GetWeather_responses_default_def_current_def_is_day_def" />
+      <string name="GetWeather_responses_default_def_current_def_condition_def_text_def" />
+      <string name="GetWeather_responses_default_def_current_def_condition_def_icon_def" />
+      <number name="GetWeather_responses_default_def_current_def_condition_def_code_def" />
+      <object name="GetWeather_responses_default_def_current_def_condition_def">
+        <property name="text" type="string" />
+        <property name="icon" type="string" />
+        <property name="code" type="number" />
+      </object>
+      <number name="GetWeather_responses_default_def_current_def_wind_mph_def" />
+      <number name="GetWeather_responses_default_def_current_def_wind_kph_def" />
+      <number name="GetWeather_responses_default_def_current_def_wind_degree_def" />
+      <string name="GetWeather_responses_default_def_current_def_wind_dir_def" />
+      <number name="GetWeather_responses_default_def_current_def_pressure_mb_def" />
+      <number name="GetWeather_responses_default_def_current_def_pressure_in_def" />
+      <number name="GetWeather_responses_default_def_current_def_precip_mm_def" />
+      <number name="GetWeather_responses_default_def_current_def_precip_in_def" />
+      <number name="GetWeather_responses_default_def_current_def_humidity_def" />
+      <number name="GetWeather_responses_default_def_current_def_cloud_def" />
+      <number name="GetWeather_responses_default_def_current_def_feelslike_c_def" />
+      <number name="GetWeather_responses_default_def_current_def_feelslike_f_def" />
+      <number name="GetWeather_responses_default_def_current_def_vis_km_def" />
+      <number name="GetWeather_responses_default_def_current_def_vis_miles_def" />
+      <number name="GetWeather_responses_default_def_current_def_uv_def" />
+      <number name="GetWeather_responses_default_def_current_def_gust_mph_def" />
+      <number name="GetWeather_responses_default_def_current_def_gust_kph_def" />
+      <object name="GetWeather_responses_default_def_current_def">
+        <property name="last_updated_epoch" type="number" />
+        <property name="last_updated" type="string" />
+        <property name="temp_c" type="number" />
+        <property name="temp_f" type="number" />
+        <property name="is_day" type="number" />
+        <property name="condition" typeRef="GetWeather_responses_default_def_current_def_condition_def" />
+        <property name="wind_mph" type="number" />
+        <property name="wind_kph" type="number" />
+        <property name="wind_degree" type="number" />
+        <property name="wind_dir" type="string" />
+        <property name="pressure_mb" type="number" />
+        <property name="pressure_in" type="number" />
+        <property name="precip_mm" type="number" />
+        <property name="precip_in" type="number" />
+        <property name="humidity" type="number" />
+        <property name="cloud" type="number" />
+        <property name="feelslike_c" type="number" />
+        <property name="feelslike_f" type="number" />
+        <property name="vis_km" type="number" />
+        <property name="vis_miles" type="number" />
+        <property name="uv" type="number" />
+        <property name="gust_mph" type="number" />
+        <property name="gust_kph" type="number" />
+      </object>
+      <object name="GetWeather_responses_default_def">
+        <property name="location" typeRef="GetWeather_responses_default_def_location_def" />
+        <property name="current" typeRef="GetWeather_responses_default_def_current_def" />
+      </object>
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://asia-001.azure-apim.net/apim/weather-20connector-5ff513920a258719aa-5f3359874475a052d9">
+    <resource path="/{connectionId}/current.json">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="GetWeather" actionName="GetWeather" visibility="important" siena:isDeprecated="false">
+        <doc title="Get Weather Information&#xA;Get Weather Information from rapid api" />
+        <request>
+          <param style="query" name="q" type="xs:string" />
+          <param style="header" name="X-RapidAPI-Key" type="xs:string" required="true" default="e2cffd18a5msh1c92f3522aadb36p1f9567jsn56cbc822e4ed" />
+          <param style="header" name="X-RapidAPI-Host" type="xs:string" required="true" default="weatherapi-com.p.rapidapi.com" />
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:GetWeather_responses_default_def" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_weather-20connector-5ff513920a258719aa-5f3359874475a052d9" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

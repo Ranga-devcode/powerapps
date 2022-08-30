@@ -1,0 +1,23 @@
+{
+  "14e7ca00-d98e-4acf-9f1c-2552b6e4cfde": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Weather Connector",
+      "iconUri": "https://prodapiicons.cdn.powerappscdn.net/20220829t000000z300e30c7cfc442208c53f6e8b157a3c9/customconnectoricon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_weather-20connector-5ff513920a258719aa-5f3359874475a052d9",
+      "isCustomApiConnection": true,
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "WeatherConnector"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "14e7ca00-d98e-4acf-9f1c-2552b6e4cfde"
+  }
+}

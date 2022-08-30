@@ -1,0 +1,8 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_weather-20connector-5ff513920a258719aa-5f3359874475a052d9",
+    "Name": "WeatherConnector",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo"
+  }
+]

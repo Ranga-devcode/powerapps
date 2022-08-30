@@ -1,0 +1,194 @@
+"'Main Screen' As screen":
+    OnVisible: |-
+        =Set(gvarAPIKey,"e2cffd18a5msh1c92f3522aadb36p1f9567jsn56cbc822e4ed");
+        Set(gvarHost,"weatherapi-com.p.rapidapi.com");
+    Width: =
+
+    Label1 As label:
+        Align: =Align.Right
+        Height: =112
+        Size: =30
+        Text: ="Enter Your Location"
+        Width: =408
+        Y: =17
+        ZIndex: =1
+
+    txtLocation As text:
+        BorderColor: =RGBA(204, 204, 204, 1)
+        Default: =""
+        Height: =127
+        HintText: ="Enter your location"
+        Size: =30
+        Width: =687
+        X: =408
+        Y: =10
+        ZIndex: =2
+
+    Button1 As button:
+        Height: =127
+        OnSelect: |-
+            =UpdateContext(
+                {
+                    varWeather: WeatherConnector.GetWeather(
+                        gvarAPIKey,
+                        gvarHost,
+                        {q: txtLocation.Text}
+                    )
+                }
+            )
+        Size: =35
+        Text: ="OK"
+        Width: =241
+        X: =1109
+        Y: =10
+        ZIndex: =3
+
+    "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Height: =556
+        Items: =varWeather
+        TemplatePadding: =0
+        TemplateSize: =Min(440, Self.Height - 60)
+        Width: =1366
+        Y: =212
+        ZIndex: =4
+
+        "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            Items: =ThisItem.location
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =Min(160, Self.Height - 60)
+            Width: =440
+            ZIndex: =1
+
+            Title2 As label:
+                Height: =38
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =ThisItem.region
+                VerticalAlign: =VerticalAlign.Top
+                Width: =268
+                X: =150
+                Y: =82
+                ZIndex: =2
+
+            Subtitle2 As label:
+                Align: =Left
+                Height: =44
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.country
+                VerticalAlign: =VerticalAlign.Top
+                Width: =268
+                X: =150
+                ZIndex: =3
+
+            Label2 As label:
+                OnSelect: =Select(Parent)
+                Size: =20
+                Text: ="Country"
+                Y: =4
+                ZIndex: =4
+
+            Label3 As label:
+                OnSelect: =Select(Parent)
+                Size: =20
+                Text: ="Region"
+                Y: =80
+                ZIndex: =5
+
+        "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            Height: =556
+            Items: =ThisItem.current
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =Min(160, Self.Height - 60)
+            Width: =450
+            X: =440
+            ZIndex: =2
+
+            Title3 As label:
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =ThisItem.cloud
+                VerticalAlign: =VerticalAlign.Top
+                Width: =252
+                X: =248
+                ZIndex: =2
+
+            Subtitle3 As label:
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.humidity
+                VerticalAlign: =VerticalAlign.Top
+                Width: =500 
+                X: =Title3.X
+                Y: =ThisItem.humidity
+                ZIndex: =3
+
+            Label4 As label:
+                OnSelect: =Select(Parent)
+                Size: =20
+                Text: ="Cloud"
+                X: =40
+                ZIndex: =4
+
+            Label5 As label:
+                OnSelect: =Select(Parent)
+                Size: =20
+                Text: ="Humidity"
+                X: =40
+                Y: =80
+                ZIndex: =5
+
+        "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            Height: =556
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =Min(160, Self.Height - 60)
+            Width: =440
+            X: =900
+            ZIndex: =3
+
+            Title4 As label:
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =
+                VerticalAlign: =VerticalAlign.Top
+                Width: =192
+                X: =248
+                Y: =44
+                ZIndex: =2
+
+            Subtitle4 As label:
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =
+                VerticalAlign: =VerticalAlign.Top
+                Width: =192
+                X: =248
+                Y: =73
+                ZIndex: =3
+
