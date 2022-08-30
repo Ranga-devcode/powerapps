@@ -1,23 +1,100 @@
 {
   "ComponentIndexes": {},
   "ControlUniqueGuids": {},
-  "ControlUniqueIds": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Button1": 5,
+    "Gallery1": 7,
+    "Gallery2": 9,
+    "Gallery4": 15,
+    "Gallery5": 21,
+    "galleryTemplate1": 8,
+    "galleryTemplate2": 10,
+    "galleryTemplate4": 16,
+    "galleryTemplate5": 22,
+    "Label1": 6,
+    "Label2": 12,
+    "Label3": 13,
+    "Label4": 17,
+    "Label5": 20,
+    "Main Screen": 3,
+    "Screen2": 25,
+    "Subtitle2": 11,
+    "Subtitle3": 19,
+    "Subtitle4": 24,
+    "Title2": 14,
+    "Title3": 18,
+    "Title4": 23,
+    "txtLocation": 4
+  },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "08/30/2022 08:31:07",
   "IsLegacyComponentAllowGlobalScopeCase": false,
-  "LocalConnectionIDReferences": {},
+  "LocalConnectionIDReferences": {
+    "14e7ca00-d98e-4acf-9f1c-2552b6e4cfde": "\"/providers/microsoft.powerapps/apis/shared_weather-20connector-5ff513920a258719aa-5f3359874475a052d9/connections/a021e9d42661404da08685e13b38913a\""
+  },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
-  "OrderDataSource": {},
+  "OrderDataSource": {
+    "CustomGallerySample": 1,
+    "WeatherConnector": 0
+  },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
-  "OrderXMLTemplate": {},
-  "PublishOrderIndices": {},
-  "ResourcesJsonIndices": {},
+  "OrderXMLTemplate": {
+    "button": 1,
+    "gallery": 3,
+    "label": 2,
+    "text": 0
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "Button1": 4,
+    "Gallery1": 6,
+    "Gallery2": 8,
+    "Gallery4": 9,
+    "Gallery5": 10,
+    "galleryTemplate1": 7,
+    "galleryTemplate2": 11,
+    "galleryTemplate4": 16,
+    "galleryTemplate5": 21,
+    "Label1": 5,
+    "Label2": 13,
+    "Label3": 14,
+    "Label4": 17,
+    "Label5": 20,
+    "Main Screen": 2,
+    "Screen2": 24,
+    "Subtitle2": 12,
+    "Subtitle3": 19,
+    "Subtitle4": 23,
+    "Title2": 15,
+    "Title3": 18,
+    "Title4": 22,
+    "txtLocation": 3
+  },
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
   "RuleScreenIdWithoutScreen": {},
-  "TemplateVersions": {}
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.1551689,
+    "ControlCount": {
+      "button": 1,
+      "gallery": 4,
+      "galleryTemplate": 4,
+      "label": 11,
+      "screen": 2,
+      "text": 1
+    },
+    "DeserializationLoadTime": 0.3114683,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": true
 }
